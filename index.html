@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gargi &amp; Aditya &mdash; Wedding Reception Invitation</title>
+  <meta name="description" content="Join Gargi and Aditya for their wedding reception on Sunday, 13 December 2026 at Bird Valley, Hinjawadi, Pune.">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gargi &amp; Aditya &mdash; Reception Invitation">
+  <meta property="og:description" content="You are warmly invited to celebrate Gargi and Aditya's wedding reception on 13 December 2026.">
+  <meta property="og:image" content="assets/images/ga-sigil-seal.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/ga-sigil-seal.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Ambient Gold Sparkles Canvas -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Occasional illustrated pet cameos; decorative and non-interactive -->
+  <div class="pet-ambience" id="pet-ambience" aria-hidden="true" hidden>
+    <div class="pet-cameo-layer">
+      <span class="pet-character pet-character--golden">
+        <img class="pet-pose pet-pose--running" src="assets/images/pet-golden-running.png" alt="" width="768" height="512">
+        <img class="pet-pose pet-pose--running pet-pose--running-alt" src="assets/images/pet-golden-running-alt.png" alt="" width="768" height="512">
+        <img class="pet-pose pet-pose--greeting" src="assets/images/pet-golden-greeting.png" alt="" width="512" height="768">
+      </span>
+      <span class="pet-character pet-character--calico">
+        <img class="pet-pose pet-pose--running" src="assets/images/pet-calico-running.png" alt="" width="768" height="512">
+        <img class="pet-pose pet-pose--running pet-pose--running-alt" src="assets/images/pet-calico-running-alt.png" alt="" width="768" height="512">
+        <img class="pet-pose pet-pose--greeting" src="assets/images/pet-calico-greeting.png" alt="" width="512" height="768">
+      </span>
+      <span class="pet-character pet-character--inie">
+        <img class="pet-pose pet-pose--running" src="assets/images/pet-inie-running.png" alt="" width="768" height="512">
+        <img class="pet-pose pet-pose--running pet-pose--running-alt" src="assets/images/pet-inie-running-alt.png" alt="" width="768" height="512">
+        <img class="pet-pose pet-pose--greeting" src="assets/images/pet-inie-greeting.png" alt="" width="768" height="512">
+      </span>
+    </div>
+  </div>
+
+  <!-- Sealed invitation cover -->
+  <section class="envelope-intro" id="envelope-intro" role="dialog" aria-modal="true" aria-labelledby="envelope-title" aria-describedby="envelope-description">
+    <div class="envelope-cover-card">
+      <h1 class="envelope-title" id="envelope-title">You're Invited</h1>
+      <div class="small-divider" aria-hidden="true">
+        <img src="assets/images/floral-divider.svg" alt="" class="floral-svg-mini">
+      </div>
+      <div class="envelope-address">
+        <span class="envelope-to">For our dear family and friends</span>
+        <span class="envelope-couple">Gargi <span>&amp;</span> Aditya</span>
+        <span class="envelope-event">Wedding Reception</span>
+        <span class="envelope-date">Sunday, 13 December 2026</span>
+        <span class="envelope-venue">Bird Valley, Hinjawadi, Pune</span>
+      </div>
+      <div class="envelope-art">
+        <div class="envelope-pocket" aria-hidden="true"></div>
+        <div class="envelope-flap" aria-hidden="true"></div>
+        <div class="envelope-fold envelope-fold-left" aria-hidden="true"></div>
+        <div class="envelope-fold envelope-fold-right" aria-hidden="true"></div>
+        <div class="envelope-fold envelope-fold-bottom" aria-hidden="true"></div>
+        <button class="envelope-seal-button" id="open-invitation" type="button" aria-label="Open Gargi and Aditya's invitation">
+          <img src="assets/images/ga-sigil-seal.png" alt="G &amp; A Seal" width="108" height="108" class="sigil-seal">
+        </button>
+      </div>
+      <p class="envelope-open-prompt" id="envelope-description">Open your invitation</p>
+      <p class="envelope-hint">Click the seal to begin</p>
+    </div>
+  </section>
+
+<!-- Navigation Bar -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Reception Monogram Home">
+        <img src="assets/images/ga-sigil-seal.png" alt="G &amp; A" class="nav-sigil" width="42" height="42">
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#details" class="nav-link">Invitation</a></li>
+          <li><a href="#venue" class="nav-link">Venue &amp; Map</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="invitation-content" tabindex="-1">
+    <!-- HERO INVITATION SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-ambient-glow"></div>
+
+      <div class="hero-container" data-reveal>
+        <!-- G & A Sigil Crest -->
+        <div class="hero-crest-wrapper">
+          <img src="assets/images/ga-sigil-seal.png" alt="Gargi &amp; Aditya Monogram" class="hero-crest sigil-hero" width="140" height="140">
+        </div>
+
+        <div class="hero-couple">
+          <h1 class="couple-names">
+            <span class="name-first">Gargi</span>
+            <span class="name-ampersand">&amp;</span>
+            <span class="name-second">Aditya</span>
+          </h1>
+        </div>
+
+        <!-- Botanical Floral Divider -->
+        <div class="hero-divider">
+          <img src="assets/images/floral-divider.svg" alt="" aria-hidden="true" class="floral-svg">
+        </div>
+
+        <!-- Date & Location Subtitle -->
+        <div class="hero-event-meta">
+          <p class="hero-date">
+            <span class="meta-icon">&#10022;</span>
+            <span class="meta-text">Sunday, 13 December 2026</span>
+            <span class="meta-icon">&#10022;</span>
+          </p>
+          <p class="hero-venue-line">Bird Valley, Hinjawadi, Pune &bull; 5:00 PM onwards</p>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-wrapper" id="countdown" data-event-date="2026-12-13T17:00:00+05:30" aria-label="Countdown to the reception">
+          <div class="countdown-card">
+            <span class="countdown-val" id="cd-days">00</span>
+            <span class="countdown-lbl">Days</span>
+          </div>
+          <div class="countdown-card">
+            <span class="countdown-val" id="cd-hours">00</span>
+            <span class="countdown-lbl">Hours</span>
+          </div>
+          <div class="countdown-card">
+            <span class="countdown-val" id="cd-mins">00</span>
+            <span class="countdown-lbl">Minutes</span>
+          </div>
+          <div class="countdown-card">
+            <span class="countdown-val" id="cd-secs">00</span>
+            <span class="countdown-lbl">Seconds</span>
+          </div>
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="hero-cta-group">
+          <a href="#details" class="btn btn-primary">
+            <span class="btn-text">View Evite</span>
+            <span class="btn-glow"></span>
+          </a>
+          <a href="#venue" class="btn btn-secondary">
+            <span class="btn-text">Venue &amp; Map</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIGITAL EVITE DETAILS SECTION -->
+    <section class="section evite-section" id="details">
+      <div class="container">
+        <div class="evite-card ornate-card" data-reveal>
+          <div class="corner-ornament top-left"><img src="assets/images/corner-ornament.svg" alt="" aria-hidden="true"></div>
+          <div class="corner-ornament top-right"><img src="assets/images/corner-ornament.svg" alt="" aria-hidden="true"></div>
+          <div class="corner-ornament bottom-left"><img src="assets/images/corner-ornament.svg" alt="" aria-hidden="true"></div>
+          <div class="corner-ornament bottom-right"><img src="assets/images/corner-ornament.svg" alt="" aria-hidden="true"></div>
+
+          <!-- Sigil Crest -->
+          <div class="evite-sigil-wrap text-center">
+            <img src="assets/images/ga-sigil-seal.png" alt="G &amp; A Monogram" class="evite-sigil" width="116" height="116">
+          </div>
+
+          <div class="text-center evite-header">
+            <span class="script-subtitle">Together with their families</span>
+            <h2 class="evite-couple-heading">Gargi &amp; Aditya</h2>
+            <div class="small-divider">
+              <img src="assets/images/floral-divider.svg" alt="" aria-hidden="true" class="floral-svg-mini">
+            </div>
+            <p class="evite-invite-text">
+              cordially request the honour of your presence<br>
+              to celebrate their
+            </p>
+            <p class="evite-event-name">Wedding Reception</p>
+          </div>
+
+          <!-- Event Detail Cards -->
+          <div class="evite-details-grid">
+            <div class="evite-detail-item">
+              <div class="evite-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <div class="evite-detail-text">
+                <span class="evite-detail-label">Date</span>
+                <span class="evite-detail-value">Sunday, 13 December 2026</span>
+              </div>
+            </div>
+
+            <div class="evite-detail-item">
+              <div class="evite-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div class="evite-detail-text">
+                <span class="evite-detail-label">Time</span>
+                <span class="evite-detail-value">5:00 PM onwards</span>
+              </div>
+            </div>
+
+            <div class="evite-detail-item">
+              <div class="evite-detail-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="evite-detail-text">
+                <span class="evite-detail-label">Venue</span>
+                <span class="evite-detail-value">Bird Valley, Hinjawadi</span>
+                <span class="evite-detail-sub">Pune, Maharashtra</span>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- Action Buttons -->
+          <div class="evite-actions text-center">
+            <a id="btn-google-cal" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <span class="btn-text">Add to Google Calendar</span>
+            </a>
+            <a href="#venue" class="btn btn-secondary">
+              <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                <line x1="8" y1="2" x2="8" y2="18"></line>
+                <line x1="16" y1="6" x2="16" y2="22"></line>
+              </svg>
+              <span class="btn-text">Venue &amp; Directions</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENUE & GOOGLE MAPS SECTION -->
+    <section class="section venue-section" id="venue">
+      <div class="container">
+        <div class="section-header text-center" data-reveal>
+          <span class="script-subtitle">Location &amp; Directions</span>
+          <h2 class="section-title">Bird Valley, Hinjawadi</h2>
+          <div class="small-divider">
+            <img src="assets/images/floral-divider.svg" alt="" aria-hidden="true" class="floral-svg-mini">
+          </div>
+          <p class="section-desc">We look forward to celebrating with you at Bird Valley, Hinjawadi, Pune.</p>
+        </div>
+
+        <div class="venue-grid" data-reveal>
+          <!-- Venue Details Card -->
+          <div class="venue-card">
+            <div class="venue-card-badge">Reception Venue</div>
+            <h3 class="venue-name">Bird Valley, Hinjawadi, Pune</h3>
+
+            <div class="venue-address-block">
+              <svg class="venue-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div class="address-lines">
+                <p class="address-primary">Hinjawadi, Pune</p>
+                <p class="address-secondary">Maharashtra, India</p>
+              </div>
+            </div>
+
+            <div class="venue-actions">
+              <a id="btn-maps-link" href="https://www.google.com/maps/place/Bird+Valley+Hinjawadi/@18.5891426,73.7271667,15z/data=!4m6!3m5!1s0x3bc2bb788b4eec03:0xcbf6532841f5a6a9!8m2!3d18.5772427!4d73.7366577!16s%2Fg%2F11tmwtj4k0?entry=ttu&amp;g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                  <line x1="8" y1="2" x2="8" y2="18"></line>
+                  <line x1="16" y1="6" x2="16" y2="22"></line>
+                </svg>
+                Open in Google Maps
+              </a>
+
+              <button id="btn-copy-address" class="btn btn-outline-gold btn-block" data-address="Bird Valley, Hinjawadi, Pune, Maharashtra, India">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copy-text">Copy Venue Location</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Interactive Google Maps Frame -->
+          <div class="venue-map-container">
+            <div class="map-frame-wrapper">
+              <iframe
+                id="google-maps-iframe"
+                title="Venue Location Map"
+                src="https://maps.google.com/maps?q=18.5772427,73.7366577%20(Bird%20Valley%2C%20Hinjawadi%2C%20Pune)&z=15&output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+              <div class="map-overlay-badge">
+                <span>Bird Valley, Hinjawadi</span>
+              </div>
+            </div>
+            <p class="map-hint">If the map does not load, use the <a href="https://www.google.com/maps/place/Bird+Valley+Hinjawadi/@18.5891426,73.7271667,15z/data=!4m6!3m5!1s0x3bc2bb788b4eec03:0xcbf6532841f5a6a9!8m2!3d18.5772427!4d73.7366577!16s%2Fg%2F11tmwtj4k0?entry=ttu&amp;g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Google Maps directions</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast-message" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="invitation-footer">
+    <div class="container text-center">
+      <div class="footer-crest">
+        <img src="assets/images/ga-sigil-seal.png" alt="G &amp; A Monogram" class="footer-sigil" width="84" height="84">
+      </div>
+      <h2 class="footer-couple-name">Gargi &amp; Aditya</h2>
+      <p class="footer-tagline">We look forward to celebrating with you.</p>
+
+      <div class="footer-links">
+        <a href="#hero">Back to Top &uarr;</a>
+        <span class="footer-sep">&bull;</span>
+        <a href="#details">Invitation Details</a>
+        <span class="footer-sep">&bull;</span>
+        <a href="#venue">Venue &amp; Map</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

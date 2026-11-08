@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dfba62" />
+      <stop offset="35%" stop-color="#fdf4db" />
+      <stop offset="70%" stop-color="#c9a84c" />
+      <stop offset="100%" stop-color="#8e6d24" />
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Dotted Orbit -->
+  <circle cx="100" cy="100" r="92" stroke="url(#goldGrad)" stroke-width="1.2" stroke-dasharray="3 4" opacity="0.6"/>
+  
+  <!-- Outer Ring with small accent diamonds -->
+  <circle cx="100" cy="100" r="84" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.85"/>
+  <circle cx="100" cy="100" r="76" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Compass / Diamond Accents -->
+  <polygon points="100,10 102.5,16 100,22 97.5,16" fill="url(#goldGrad)" />
+  <polygon points="100,190 102.5,184 100,178 97.5,184" fill="url(#goldGrad)" />
+  <polygon points="10,100 16,102.5 22,100 16,97.5" fill="url(#goldGrad)" />
+  <polygon points="190,100 184,102.5 178,100 184,97.5" fill="url(#goldGrad)" />
+
+  <!-- Botanical Laurel Wreath Leaves (Left side) -->
+  <path d="M 42 120 C 34 95 44 65 65 48" stroke="url(#goldGrad)" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <!-- Leaf pairs left -->
+  <path d="M 42 120 C 37 114 36 107 41 103 C 44 107 45 114 42 120 Z" fill="url(#goldGrad)"/>
+  <path d="M 40 100 C 34 96 32 89 38 85 C 41 89 42 96 40 100 Z" fill="url(#goldGrad)"/>
+  <path d="M 46 80 C 40 76 39 69 46 65 C 48 70 48 76 46 80 Z" fill="url(#goldGrad)"/>
+  <path d="M 56 62 C 50 58 50 51 57 48 C 59 52 59 58 56 62 Z" fill="url(#goldGrad)"/>
+  <path d="M 68 48 C 64 43 65 37 72 36 C 73 40 71 46 68 48 Z" fill="url(#goldGrad)"/>
+
+  <!-- Botanical Laurel Wreath Leaves (Right side) -->
+  <path d="M 158 120 C 166 95 156 65 135 48" stroke="url(#goldGrad)" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+  <!-- Leaf pairs right -->
+  <path d="M 158 120 C 163 114 164 107 159 103 C 156 107 155 114 158 120 Z" fill="url(#goldGrad)"/>
+  <path d="M 160 100 C 166 96 168 89 162 85 C 159 89 158 96 160 100 Z" fill="url(#goldGrad)"/>
+  <path d="M 154 80 C 160 76 161 69 154 65 C 152 70 152 76 154 80 Z" fill="url(#goldGrad)"/>
+  <path d="M 144 62 C 150 58 150 51 143 48 C 141 52 141 58 144 62 Z" fill="url(#goldGrad)"/>
+  <path d="M 132 48 C 136 43 135 37 128 36 C 127 40 129 46 132 48 Z" fill="url(#goldGrad)"/>
+
+  <!-- Central Crest Crown / Coronet -->
+  <path d="M 86 64 L 92 70 L 100 58 L 108 70 L 114 64 L 112 74 L 88 74 Z" fill="url(#goldGrad)" opacity="0.9"/>
+  <circle cx="86" cy="62" r="1.5" fill="url(#goldGrad)"/>
+  <circle cx="100" cy="56" r="2" fill="url(#goldGrad)"/>
+  <circle cx="114" cy="62" r="1.5" fill="url(#goldGrad)"/>
+
+  <!-- Gargi & Aditya monogram -->
+  <text x="100" y="118" text-anchor="middle" font-family="'Cormorant Garamond', 'Cinzel', serif" font-size="40" font-weight="400" fill="url(#goldGrad)" letter-spacing="1">G &amp; A</text>
+  
+  <!-- Subtitle Ribbon / Flourish -->
+  <path d="M 72 134 C 88 139 112 139 128 134" stroke="url(#goldGrad)" stroke-width="1.2" stroke-linecap="round"/>
+  <polygon points="100,135 102,137 100,139 98,137" fill="url(#goldGrad)"/>
+  <text x="100" y="152" text-anchor="middle" font-family="'Cinzel', sans-serif" font-size="9" font-weight="500" fill="url(#goldGrad)" letter-spacing="3.5" opacity="0.9">RECEPTION</text>
+</svg>
